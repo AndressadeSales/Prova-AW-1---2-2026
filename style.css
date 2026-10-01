@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #091326 0%, #111d38 50%, #1a3356 100%);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fundo Estrelado Animado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #ffd700, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #ebb336, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.6;
+    animation: piscarEstrelas 4s infinite alternate ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes piscarEstrelas {
+    0% { opacity: 0.3; transform: scale(0.98); }
+    100% { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* Partículas / Brilhos Mágicos do Rato */
+.sparkle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #fff 10%, #ffd700 80%);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffffff;
+    animation: animarBrilho 1s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes animarBrilho {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.2) translateY(-30px) rotate(180deg);
+    }
+}
+
+/* Container Principal Mágico */
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 950px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(235, 179, 54, 0.4);
+    border: 2px solid #ebb336;
+    backdrop-filter: blur(5px);
+}
+
+/* Título com Brilho Disney */
+h1 {
+    color: #0b1a3a;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(235, 179, 54, 0.6);
+    letter-spacing: 0.5px;
+}
+
+/* Seções */
+.form-section, .chapa-section {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+    color: #162447;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #ebb336;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1f4068;
+    font-size: 0.95rem;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #ebb336;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(235, 179, 54, 0.4);
+}
+
+small {
+    color: #64748b;
+    display: block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+}
+
+/* Botões Mágicos */
+button {
+    background: linear-gradient(135deg, #ebb336 0%, #d49a1d 100%);
+    color: #0b1a3a;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(235, 179, 54, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(235, 179, 54, 0.7);
+    background: linear-gradient(135deg, #f5be42 0%, #e0a322 100%);
+}
+
+#btnFinalizar {
+    background: linear-gradient(135deg, #162447 0%, #0b1a3a 100%);
+    color: #ebb336;
+    border: 1px solid #ebb336;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+}
+
+#btnFinalizar:hover {
+    background: linear-gradient(135deg, #1f4068 0%, #162447 100%);
+    box-shadow: 0 6px 20px rgba(235, 179, 54, 0.5);
+}
+
+.erro {
+    color: #e63946;
+    background-color: #ffe5e5;
+    border-left: 4px solid #e63946;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.erro:empty {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #0b1a3a;
+    color: #ebb336;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+.foto-candidato {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ebb336;
+    box-shadow: 0 2px 8px rgba(235, 179, 54, 0.4);
+}
+
+.btn-remover {
+    background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+    color: white;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(230, 57, 70, 0.3);
+}
+
+.btn-remover:hover {
+    background: linear-gradient(135deg, #f04754 0%, #d11a27 100%);
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.5);
+}

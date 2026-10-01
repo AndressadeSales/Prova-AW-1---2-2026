@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Candidatos - PDisney</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chapa Eleitoral - PDisney (Número do Partido: 91)</h1>
+
+        <!-- Formulário de Indicação -->
+        <section class="form-section">
+            <h2>Indicar Candidato</h2>
+            <form id="formCandidato">
+                <div class="form-group">
+                    <label for="selectFiliado">Filiado:</label>
+                    <select id="selectFiliado" required>
+                        <option value="">Selecione um filiado...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectCargo">Cargo Eletivo:</label>
+                    <select id="selectCargo" required>
+                        <option value="">Selecione o cargo...</option>
+                        <option value="Presidente">Presidente (2 dígitos)</option>
+                        <option value="Governador">Governador(a) (2 dígitos)</option>
+                        <option value="Senador">Senador(a) (3 dígitos)</option>
+                        <option value="Deputado Federal">Deputado(a) Federal (4 dígitos)</option>
+                        <option value="Deputado Estadual">Deputado(a) Estadual (5 dígitos)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputNumero">Número do Candidato:</label>
+                    <input type="text" id="inputNumero" placeholder="Ex: 91, 911, 9111..." required>
+                    <small>Regra: Deve começar com 91 e ter a quantidade exata de dígitos do cargo.</small>
+                </div>
+
+                <button type="submit" id="btnAdicionar">Adicionar à Chapa</button>
+            </form>
+            <div id="mensagemErro" class="erro"></div>
+        </section>
+
+        <!-- Tabela de Confirmação da Chapa -->
+        <section class="chapa-section">
+            <h2>Chapa Oficial Confirmada</h2>
+            <table id="tabelaChapa">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Número</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Candidatos adicionados via JS aparecerão aqui -->
+                </tbody>
+            </table>
+
+            <br>
+            <button id="btnFinalizar" type="button">Finalizar e Baixar PDisney.json</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
