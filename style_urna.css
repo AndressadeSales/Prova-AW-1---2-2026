@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #091326 0%, #111d38 50%, #1a3356 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.urna {
+    background-color: #dbd5c9;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 3px solid #ebb336;
+}
+
+.tela-container {
+    background-color: #aeb8ab;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #555;
+}
+
+.tela {
+    width: 450px;
+    height: 320px;
+    background: linear-gradient(135deg, #e8ecef 0%, #c7d3c0 100%);
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.d-1 {
+    display: flex;
+    height: 230px;
+}
+
+.d-1-left {
+    flex: 1;
+}
+
+.d-1-1 {
+    font-size: 12px;
+}
+
+.d-1-2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    height: 30px;
+}
+
+.d-1-3 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.numero {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fff;
+}
+
+.numero.pisca {
+    animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.d-1-4 {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.d-1-right {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.image {
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.image img {
+    width: 90px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.d-2 {
+    height: 50px;
+    font-size: 11px;
+    border-top: 2px solid #000;
+    padding-top: 5px;
+}
+
+.teclado {
+    background-color: #2b2b2b;
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teclado--linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.teclado--botao {
+    width: 60px;
+    height: 45px;
+    background-color: #111;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #000;
+    user-select: none;
+}
+
+.teclado--botao:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #000;
+}
+
+.acoes {
+    margin-top: 10px;
+}
+
+.btn-branco {
+    background-color: #fff;
+    color: #000;
+    font-size: 11px;
+    width: 70px;
+}
+
+.btn-corrige {
+    background-color: #f04438;
+    color: #fff;
+    font-size: 11px;
+    width: 70px;
+}
+
+.btn-confirma {
+    background-color: #12b76a;
+    color: #fff;
+    font-size: 11px;
+    width: 80px;
+    height: 55px;
+}
+
+/* Ajuste dos avisos para evitar estouro/sobreposição */
+.aviso--grande {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    color: #000;
+}
+
+.aviso--gigante {
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.painel-fiscal {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    border: 2px solid #ebb336;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.painel-fiscal h2 {
+    font-size: 1.1rem;
+    color: #0b1a3a;
+    margin-bottom: 10px;
+}
+
+.painel-fiscal button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #162447;
+    color: #ebb336;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.painel-fiscal button:hover {
+    background: #1f4068;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 2px solid #ebb336;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

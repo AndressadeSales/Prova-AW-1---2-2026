@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Flash",
+    "numero": "93",
+    "foto": "flash.png",
+    "cargo": "Presidente"
+  },
+  {
+    "nome": "Ciborgue",
+    "numero": "93",
+    "foto": "ciborg.png",
+    "cargo": "Governador"
+  },
+  {
+    "nome": "Arqueiro Verde",
+    "numero": "930",
+    "foto": "arqueiro.png",
+    "cargo": "Senador"
+  },
+  {
+    "nome": "Batman",
+    "numero": "931",
+    "foto": "batman.png",
+    "cargo": "Senador"
+  },
+  {
+    "nome": "Aquaman",
+    "numero": "9310",
+    "foto": "aqua.png",
+    "cargo": "Deputado Federal"
+  },
+  {
+    "nome": "Mulher-Maravilha",
+    "numero": "93800",
+    "foto": "mulhermara.png",
+    "cargo": "Deputado Estadual"
+  }
+]
